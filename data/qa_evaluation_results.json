@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "question": "Dans quelle ville a lieu l'evenement la fleur au fusil ?",
+    "source_title_attendu": "La Fleur au fusil",
+    "reponse_generee": "L'événement **\"La Fleur au fusil\"** a lieu à **Buc**.",
+    "sources_trouvees": [
+      "La Fleur au fusil",
+      "*Evénement",
+      "Dans La Lune",
+      "La Cerisaie",
+      "La Guerre des Lulus - Ciné-B.D."
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Qu'est ce que l'evenement le lien ?",
+    "source_title_attendu": "Le lien",
+    "reponse_generee": "L'événement **\"Le lien : Journée événementielle\"** est une exposition du club-photo **ZOOM 92130**, qui se déroule à **Issy-les-Moulineaux** le **19 septembre 2026** de **10h00 à 17h00**.",
+    "sources_trouvees": [
+      "Qu'est-ce que le temps ?",
+      "*Evénement",
+      "Ce qui nous lie de Cédric Klapisch (2017-1h53)",
+      "Exposition : Le lien : Journée événementielle",
+      "Qui Som ? - Baro d'evel"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "A quelle heure commence la soirée-débat LA VIE D'UNE FEMME ?",
+    "source_title_attendu": "Soirée-débat LA VIE D'UNE FEMME",
+    "reponse_generee": "La soirée-débat **LA VIE D'UNE FEMME** commence à **20h30** le **10 septembre 2026** à Antony.",
+    "sources_trouvees": [
+      "Soirée-débat LA VIE D'UNE FEMME",
+      "18h15 REAL - LA VIE D'UNE FEMME",
+      "Soirée débat",
+      "La vie d'une femme",
+      "Rencontre débat"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Quel est le dernier jour de Viva Verdi ! Chantons l'orchestre ?",
+    "source_title_attendu": "Viva Verdi ! Chantons avec l'orchestre",
+    "reponse_generee": "Le dernier jour de **Viva Verdi ! Chantons avec l'orchestre** est le **30 mai 2027**.",
+    "sources_trouvees": [
+      "Viva Verdi ! Chantons avec l'orchestre",
+      "Bulles d'opérette",
+      "Les midis en musique de l'UOV - \"Chant lyrique\"",
+      "Sacrée musique !",
+      "Vibrer - Grandir - Partager"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Quand commence La voile de confiance ?",
+    "source_title_attendu": "La voile de confiance",
+    "reponse_generee": "La voile de confiance commence le **2026-10-04 à 16h00**.",
+    "sources_trouvees": [
+      "La voile de confiance",
+      "La voile de confiance : Conte musical et éducatif",
+      "Tant qu'il y aura des coquelicots",
+      "Art",
+      "Les conflits du passé et de l'avenir"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Quelle est l'adresse exacte de Notre Salut ?",
+    "source_title_attendu": "Notre salut",
+    "reponse_generee": "Je ne trouve pas d'adresse exacte pour l'événement \"Notre Salut\" dans les informations fournies.",
+    "sources_trouvees": [
+      "NOTRE SALUT",
+      "NOTRE SALUT",
+      "NOTRE SALUT",
+      "Notre salut",
+      "Notre salut"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Est ce que le Stage - La voix chantée dans les Musiques Actuelles est gratuit ?",
+    "source_title_attendu": "Stage - La voix chantée dans les Musiques Actuelles",
+    "reponse_generee": "Je ne trouve pas d'information sur le prix du **Stage - La voix chantée dans les Musiques Actuelles** dans le contexte fourni.",
+    "sources_trouvees": [
+      "Stage - La voix chantée dans les Musiques Actuelles – Parcours intensif",
+      "La voix chantée dans les Musiques Actuelles – Parcours long",
+      "Stage - Interpréter sur scène une œuvre chantée dans les musiques actuelles – Parcours intensif",
+      "Stage musiques actuelles",
+      "Stage - Ecriture de textes de chanson dans les musiques actuelles"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Est ce que le Circuit Fort d'Issy : La ville de demain se situe bien à Issy Les Moulineaux ?",
+    "source_title_attendu": "Circuit \"Fort d'Issy : La ville de demain\"",
+    "reponse_generee": "Oui, le **Circuit \"Fort d’Issy : La ville de demain\"** se situe bien à **Issy-les-Moulineaux**.",
+    "sources_trouvees": [
+      "Circuit \"Fort d’Issy : La ville de demain\"",
+      "Circuit \"Ile Saint-Germain : de la tour Dubuffet à la place Saint-Germain\"",
+      "ISSY-LES-MOULINEAUX : ⚽♻️ Foot Tri : à vous de jouer pour bien trier !",
+      "Visite libre de l'Espace découverte de la Tour aux figures",
+      "Rallye dans le parc Jean-Paul II et le square de l’Abbé Derry"
+    ]
+  }
+]
