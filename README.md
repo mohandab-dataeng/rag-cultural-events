@@ -10,10 +10,6 @@
 
 **POC d'un chatbot RAG (Retrieval-Augmented Generation) qui aide à découvrir des événements culturels en Île-de-France, en langage naturel.**
 
-> Projet réalisé pour **Puls-Events**, plateforme d'agrégation d'événements culturels, dans le cadre d'une certification Data Engineering (OpenClassrooms RNCP Niveau 7).
-
----
-
 ## Le principe
 
 Poser une question en langage naturel — *"des expos photo cette semaine ?"*, *"un événement à Antony le 10 septembre ?"* — et obtenir une réponse ancrée dans de vraies données d'événements, avec les sources utilisées affichées à côté. Pas de réponse inventée : si l'info n'est pas dans la base, le chatbot le dit clairement plutôt que d'halluciner.
