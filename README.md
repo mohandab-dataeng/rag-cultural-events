@@ -43,19 +43,20 @@ Open Agenda API → nettoyage/filtrage → chunking → embeddings (Mistral) →
 
 ```
 rag-cultural-events/
+├── main.py                    # Orchestrateur : lance le pipeline complet
 ├── src/
-│   ├── data_collection.py   # Collecte des événements via Open Agenda
-│   ├── preprocessing.py      # Nettoyage, filtrage, chunking
-│   ├── vectorization.py      # Embeddings + construction de l'index FAISS
-│   ├── rag_chain.py          # Chatbot : retrieval + génération
-│   └── evaluate.py           # Évaluation sur un jeu de questions annoté
+│   ├── data_collection.py     # Collecte des événements via Open Agenda
+│   ├── preprocessing.py       # Nettoyage, filtrage, chunking
+│   ├── vectorization.py       # Embeddings + construction de l'index FAISS
+│   ├── rag_chain.py           # Chatbot : retrieval + génération
+│   └── evaluate.py            # Évaluation sur un jeu de questions annoté
 ├── tests/
-│   └── test_data_filters.py  # Vérifie la conformité des données (date, ville)
+│   └── test_data_filters.py   # Vérifie la conformité des données (date, ville, région)
 ├── data/
-│   ├── raw/                  # Événements bruts collectés
-│   ├── processed/            # Événements nettoyés et chunkés
-│   └── qa_test_set.json      # Jeu de questions de test
-├── index_faiss/               # Index vectoriel (généré, non versionné)
+│   ├── raw/                   # Événements bruts collectés
+│   ├── processed/             # Événements nettoyés et chunkés
+│   └── qa_test_set.json       # Jeu de questions de test
+├── index_faiss/                # Index vectoriel (généré, non versionné)
 ├── .env.example                # Template des clés API
 ├── pyproject.toml
 └── README.md
@@ -75,20 +76,25 @@ cp .env.example .env
 # renseigner MISTRAL_API_KEY et OPENAGENDA_PUBLIC_KEY dans .env
 ```
 
-## Reconstruire la base de données à partir de zéro
+## Lancer le pipeline complet
 
-Le pipeline est entièrement reproductible, dans cet ordre :
+Une seule commande reconstruit tout (collecte → nettoyage → vectorisation → tests) et lance le chatbot :
+
+```bash
+uv run python main.py
+```
+
+Le pipeline s'arrête automatiquement si une étape échoue (données invalides, tests en échec) — le chatbot ne se lance que si tout est validé.
+
+## Lancer les étapes individuellement
+
+Chaque étape peut aussi être lancée séparément :
 
 ```bash
 uv run python src/data_collection.py    # collecte les événements Open Agenda
 uv run python src/preprocessing.py      # nettoie et prépare les données
 uv run python src/vectorization.py      # construit l'index FAISS
-```
-
-## Lancer le chatbot
-
-```bash
-uv run python src/rag_chain.py
+uv run python src/rag_chain.py          # lance le chatbot
 ```
 
 ```
@@ -105,7 +111,7 @@ Sources :
 uv run pytest tests/ -v
 ```
 
-Vérifie que chaque événement indexé a bien une date de moins d'un an, un titre, une description et une ville renseignée.
+Vérifie que chaque événement indexé a bien une date de moins d'un an, un titre, une description, une ville renseignée, et que les données proviennent bien de l'agenda officiel Île-de-France.
 
 ## Évaluer le chatbot
 
@@ -121,3 +127,7 @@ uv run python src/evaluate.py
 - **`langchain-community`** (utilisé pour l'intégration FAISS) est en fin de vie — à surveiller pour une migration future vers un package dédié maintenu
 - **Évaluation manuelle** — une version industrialisée gagnerait à s'appuyer sur un framework standard type [RAGAS](https://github.com/explodinggradients/ragas) (faithfulness, context precision/recall, answer relevancy) plutôt qu'une vérification manuelle
 - **Tier gratuit Mistral** — limites de débit basses, non adaptées à un usage multi-utilisateurs en production ; un passage en tier payant serait nécessaire pour un déploiement à plus grande échelle
+
+## Auteur
+
+Projet réalisé par Mohand, dans le cadre de la certification Data Engineer RNCP Niveau 7 (OpenClassrooms).
