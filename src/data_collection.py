@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BASE_URL = "https://api.openagenda.com/v2/agendas/56500817/events"
+BASE_URL = "https://api.openagenda.com/v2/agendas/56500817/events" # <-Recuperation de l'uid = la region île de france sur Openagenda
 REGION = "Île-de-France"
 
 def build_params(after_cursor=None):

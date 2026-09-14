@@ -1,5 +1,5 @@
 """
-Fait tourner le RAG sur tes questions réelles, affiche la réponse générée à côté du titre attendu.
+Fait tourner le RAG sur mes questions réelles, affiche la réponse générée à côté du titre attendu.
 """
 import json
 import time

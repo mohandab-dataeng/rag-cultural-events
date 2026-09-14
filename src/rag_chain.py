@@ -1,5 +1,5 @@
 """
-Chatbot RAG : orchestre la recherche FAISS et la génération Mistral via LCEL (API stable, post LangChain 1.0).
+Chatbot RAG : orchestre la recherche FAISS et la génération Mistral via LCEL (sur une API stable, post LangChain 1.0).
 """
 import os
 import time

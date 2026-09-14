@@ -1,4 +1,4 @@
-# 🎭 rag-cultural-events
+# rag-cultural-events
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1.4-1C3C3C?logo=langchain&logoColor=white)
